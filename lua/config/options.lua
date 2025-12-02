@@ -2,7 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 -- Keep at least 15 lines visible above/below cursor
-vim.opt.scrolloff = 15
+vim.opt.scrolloff = 50
 vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
 vim.opt.termguicolors = true
 
