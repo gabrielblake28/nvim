@@ -7,6 +7,7 @@ return {
       max_name_length = 35,
       max_prefix_length = 30,
       tab_size = 30, -- <== increase this
+      always_show_bufferline = true,
     },
   },
 }
