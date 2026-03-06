@@ -7,7 +7,6 @@ return {
     opts = function(_, opts)
       -- Make sure servers table exists
       opts.servers = opts.servers or {}
-      opts.setup = opts.setup or {}
 
       -- Add or tweak the vtsls server
       opts.servers.vtsls = {
@@ -62,21 +61,6 @@ return {
           },
         },
       }
-
-      local previous_gopls_setup = opts.setup.gopls
-      opts.setup.gopls = function(server, server_opts)
-        local previous_on_attach = server_opts.on_attach
-        server_opts.on_attach = function(client, bufnr)
-          client.server_capabilities.documentHighlightProvider = false
-          if previous_on_attach then
-            previous_on_attach(client, bufnr)
-          end
-        end
-
-        if previous_gopls_setup then
-          return previous_gopls_setup(server, server_opts)
-        end
-      end
 
       return opts
     end,
