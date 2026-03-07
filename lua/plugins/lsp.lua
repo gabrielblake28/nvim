@@ -44,19 +44,20 @@ return {
         settings = {
           gopls = {
             hints = {
-              assignVariableTypes = true,
-              compositeLiteralFields = true,
-              compositeLiteralTypes = true,
-              constantValues = true,
-              functionTypeParameters = true,
-              parameterNames = true,
-              rangeVariableTypes = true,
+              assignVariableTypes = false,
+              compositeLiteralFields = false,
+              compositeLiteralTypes = false,
+              constantValues = false,
+              functionTypeParameters = false,
+              parameterNames = false,
+              rangeVariableTypes = false,
             },
             analyses = {
               unusedparams = true,
               shadow = true,
+              unusedfunc = false,
             },
-            staticcheck = true,
+            staticcheck = false,
             gofumpt = true,
           },
         },

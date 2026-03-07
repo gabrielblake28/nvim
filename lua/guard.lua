@@ -3,7 +3,7 @@ local M = {}
 local namespace = vim.api.nvim_create_namespace("guard")
 local config = {
   enabled = true,
-  cmd = "commitment-issues-guard",
+  cmd = "commitment-issues",
 }
 
 function M.setup(opts)
