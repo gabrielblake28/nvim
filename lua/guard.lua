@@ -39,7 +39,7 @@ function M.check(bufnr)
       if data and #data > 0 and data[1] ~= "" then
         local output = table.concat(data, "\n")
         local ok, result = pcall(vim.json.decode, output)
-        if ok and type(result) == "table" and result.Findings and #result.Findings > 0 then
+        if ok and type(result) == "table" and type(result.Findings) == "table" and #result.Findings > 0 then
           M.display_findings(bufnr, result.Findings)
         end
       end
