@@ -115,9 +115,9 @@ return {
           ["@lsp.mod.defaultLibrary"] = {},
           ["@lsp.mod.readonly"] = {},
           ["@lsp.typemod.function.defaultLibrary"] = { fg = "#DCDCAA" },
-          ["@lsp.typemod.variable.readonly"] = { fg = "#9CDCFE" },
-          ["@lsp.typemod.variable.local"] = { fg = "#9CDCFE" },
-          ["@lsp.typemod.parameter.readonly"] = { fg = "#9CDCFE" },
+          ["@lsp.typemod.variable.readonly"] = { fg = "#4FC1FF" },
+          ["@lsp.typemod.variable.local"] = { fg = "#4FC1FF" },
+          ["@lsp.typemod.parameter.readonly"] = { fg = "#4FC1FF" },
 
           -- ── LSP semantic tokens (Go-specific) ─────────────────
           ["@lsp.type.function.go"] = { fg = "#DCDCAA" },
