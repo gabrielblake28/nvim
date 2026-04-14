@@ -87,7 +87,7 @@ return {
 
           -- ── Treesitter: operators & punctuation ───────────────
           ["@operator"] = { fg = "#D4D4D4" },
-          ["@punctuation.bracket"] = { fg = "#DCDCAA" },
+          ["@punctuation.bracket"] = { fg = "#D4D4D4" },
           ["@punctuation.delimiter"] = { fg = "#D4D4D4" },
           ["@punctuation.special"] = { fg = "#569CD6" },
 
