@@ -39,6 +39,30 @@ return {
         end,
       }
 
+      -- Go LSP
+      opts.servers.gopls = {
+        settings = {
+          gopls = {
+            hints = {
+              assignVariableTypes = false,
+              compositeLiteralFields = false,
+              compositeLiteralTypes = false,
+              constantValues = false,
+              functionTypeParameters = false,
+              parameterNames = false,
+              rangeVariableTypes = false,
+            },
+            analyses = {
+              unusedparams = true,
+              shadow = true,
+              unusedfunc = false,
+            },
+            staticcheck = false,
+            gofumpt = true,
+          },
+        },
+      }
+
       return opts
     end,
   },
