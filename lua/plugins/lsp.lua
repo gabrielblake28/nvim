@@ -39,6 +39,25 @@ return {
         end,
       }
 
+      -- Only attach eslint-lsp when an ESLint config is present in the project.
+      -- lspconfig's util.root_pattern returns nil when no match is found, which
+      -- prevents the server from starting for that buffer.
+      opts.servers.eslint = {
+        root_dir = require("lspconfig.util").root_pattern(
+          ".eslintrc",
+          ".eslintrc.js",
+          ".eslintrc.cjs",
+          ".eslintrc.mjs",
+          ".eslintrc.yaml",
+          ".eslintrc.yml",
+          ".eslintrc.json",
+          "eslint.config.js",
+          "eslint.config.mjs",
+          "eslint.config.cjs",
+          "eslint.config.ts"
+        ),
+      }
+
       -- Go LSP
       opts.servers.gopls = {
         settings = {
