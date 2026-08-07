@@ -8,6 +8,10 @@ return {
       -- Make sure servers table exists
       opts.servers = opts.servers or {}
 
+      -- Inlay hints off by default (toggle per-session with <leader>uh)
+      opts.inlay_hints = opts.inlay_hints or {}
+      opts.inlay_hints.enabled = false
+
       -- Add or tweak the vtsls server
       opts.servers.vtsls = {
         filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
