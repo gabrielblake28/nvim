@@ -9,6 +9,7 @@ local map = vim.keymap.set
 
 -- Normal mode mappings
 map("n", "<leader>oj", "o<Esc>", { desc = "Add empty line below" })
+
 map("n", "<leader>ok", "O<Esc>", { desc = "Add empty line above" })
 
 map("n", "<leader>rs", ":source ~/.config/nvim/lua/config/keymaps.lua<CR>", { desc = "Reload keymaps config" })
