@@ -16,4 +16,6 @@ map("n", "<leader>rs", ":source ~/.config/nvim/lua/config/keymaps.lua<CR>", { de
 
 map("n", "<leader>rt", ":source ~/.config/nvim/lua/plugins/neo-tree.lua<CR>", { desc = "Reload neo-tree config" })
 
-map("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover Documentation" })
+-- Swap LazyVim's default line-number toggles
+Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>ul")
+Snacks.toggle.line_number():map("<leader>uL")
